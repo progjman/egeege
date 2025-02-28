@@ -43,7 +43,7 @@ canvas { display: block; }
 /* Список меню */
 .menu-list {
     display: none;
-    background: rgba(10, 20, 40, 0.3); /* Полупрозрачный единый фон */
+    background: rgba(10, 20, 40, 0.5); /* Полупрозрачный единый фон */
     border-radius: 8px;
     padding: 10px;
     min-width: 180px; /* Фиксированная ширина, чтобы не прыгало */
@@ -65,7 +65,7 @@ canvas { display: block; }
 /* Подменю */
 .submenu-list {
     display: none;
-    background: rgba(10, 20, 40, 0.9); /* Такой же фон */
+    background: rgba(10, 20, 40, 0.5); /* Такой же фон */
     padding-left: 10px;
 }
 
@@ -123,7 +123,7 @@ canvas { display: block; }
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background: rgba(3, 11, 23, 0.9);
+    background: rgba(3, 11, 23, 0.5);
     color: white;
     border-radius: 10px;
     text-align: center;
