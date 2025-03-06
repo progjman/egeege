@@ -1,4 +1,5 @@
 
+
 const canvas = document.getElementById("neuronsCanvas");
 const ctx = canvas.getContext("2d");
 

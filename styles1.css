@@ -1,0 +1,122 @@
+/* === Основные стили страницы === */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Тёмный режим */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Светлый режим */
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #ffcc00;
+}
+
+/* Убираем точки у <ul> и цифры у <ol> */
+ul, ol {
+    list-style: none;
+    padding: 0;  /* Убираем внутренний отступ */
+    margin: 0;   /* Убираем внешний отступ */
+}
+
+/* Ссылки */
+a {
+    color: #80cbc4;
+}
+
+/* === Контейнер контента === */
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+/* Контейнер в светлом режиме */
+.light-mode .container {
+    background: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Кнопка переключения темы === */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Кнопка в светлом режиме */
+.light-mode .toggle-btn {
+    background: #646d75;
+}
+
+/* Контейнер для стрелок "вперёд" и "назад" */
+.nav-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px; /* Делаем ширину равной контейнеру */
+    margin-top: 15px;
+}
+
+/* Стрелки "назад" и "вперёд" */
+.rocket-left, .rocket-right {
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+/* === Навигация с ракетами === */
+.rocket-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Ракета "Домой" */
+.rocket-home {
+    font-size: 25px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.rocket-home:hover {
+    transform: scale(1.2);
+}
+
+
+.rocket-left:hover {
+    transform: translateX(-10px);
+}
+
+.rocket-right:hover {
+    transform: translateX(10px);
+}
+
+/* === Встраивание навигации внутрь контейнера === */
+.container .rocket-navigation {
+    margin-top: 30px;
+}

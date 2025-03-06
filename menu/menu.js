@@ -1,5 +1,7 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/html/menu.html") // Загружаем `menu.html`
+    fetch("/menu/menu.html") // Загружаем `menu.html`
         .then(response => response.text())
         .then(data => {
             let menuContainer = document.createElement("div");

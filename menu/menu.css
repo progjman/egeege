@@ -1,0 +1,110 @@
+
+
+
+/* Стили для меню */
+.menu-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* Белый цвет */
+    background: transparent; /* Прозрачный фон */
+    padding: 5px;
+    border-radius: 5px;
+    user-select: none; /* Запрещает выделение */
+}
+
+
+/* Основное меню */
+/* Общий стиль для контейнера меню */
+.menu-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+/* Три точки */
+.menu-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Список меню */
+.menu-list {
+    display: none;
+    background: rgba(10, 20, 40, 0.5); /* Полупрозрачный единый фон */
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 180px; /* Фиксированная ширина, чтобы не прыгало */
+}
+
+/* Отображение меню */
+.menu-list.active {
+    display: block;
+}
+
+/* Пункты меню */
+.menu-item {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    white-space: nowrap; /* Запрещаем перенос строк */
+}
+
+/* Подменю */
+.submenu-list {
+    display: none;
+    background: rgba(10, 20, 40, 0.5); /* Такой же фон */
+    padding-left: 10px;
+}
+
+.submenu-list.active {
+    display: block;
+}
+
+/* Убираем подсветку при наведении */
+.menu-item:hover {
+    background: none;
+}
+
+
+
+/* Стили для ссылок в меню */
+.menu-item a {
+    color: white; /* Белый цвет */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Изменение цвета при наведении */
+.menu-item a:hover {
+    color: #ddd; /* Светло-серый при наведении */
+}
+
+
+
+
+/* Фиксируем иконку (три точки) */
+.menu-container {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Фиксируем по правому краю */
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Выравниваем по правому краю */
+}
+
+/* Убираем влияние меню на позицию иконки */
+.menu-list {
+    position: absolute;
+    top: 30px; /* Чтобы меню не накладывалось на три точки */
+    right: 0; /* Фиксируем по правому краю */
+    min-width: 180px;
+}
