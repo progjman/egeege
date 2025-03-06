@@ -1,10 +1,8 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
     // Определяем ссылки для каждой страницы
     const navigationLinks = {
         "mani0.html": { next: "mani1.html", prev: "/index.html" },
-        "page1.html": { next: "page2.html", prev: "index.html" },
+        "mani1.html": { next: "/index.html", prev: "mani0.html" },
         "page2.html": { next: "page3.html", prev: "page1.html" },
         "page3.html": { next: "page4.html", prev: "page2.html" },
         "page4.html": { next: "page5.html", prev: "page3.html" },
@@ -17,48 +15,38 @@ document.addEventListener("DOMContentLoaded", function () {
     if (navigationLinks[currentPage]) {
         const { next, prev } = navigationLinks[currentPage];
 
-        // Контейнер для всей навигации
+        // Контейнер для навигации
         const navContainer = document.createElement("div");
         navContainer.classList.add("rocket-navigation");
 
-        // Первая строка — кнопка "Домой" по центру
-        const homeRow = document.createElement("div");
-        homeRow.classList.add("home-row");
-
-        const rocketHome = document.createElement("a");
-        rocketHome.href = "/index.html";
-        rocketHome.innerHTML = "🚀";
-        rocketHome.classList.add("rocket-home");
-
-        homeRow.appendChild(rocketHome);
-        navContainer.appendChild(homeRow);
-
-        // Вторая строка — кнопки "Назад" и "Вперед"
+        // Создаем общий ряд навигации
         const navRow = document.createElement("div");
         navRow.classList.add("nav-row");
 
-        if (prev) {
-            const rocketLeft = document.createElement("a");
-            rocketLeft.href = prev;
-            rocketLeft.innerHTML = "🚀";
-            rocketLeft.classList.add("rocket-left");
-            navRow.appendChild(rocketLeft);
-        } else {
-            const emptySpace = document.createElement("div");
-            navRow.appendChild(emptySpace);
-        }
+        // Кнопка "Назад"
+        const rocketLeft = document.createElement("a");
+        rocketLeft.href = prev || "#";
+        rocketLeft.innerHTML = "🌺";  // Используем стрелку
+        rocketLeft.classList.add("rocket-left");
 
-        if (next) {
-            const rocketRight = document.createElement("a");
-            rocketRight.href = next;
-            rocketRight.innerHTML = "🚀";
-            rocketRight.classList.add("rocket-right");
-            navRow.appendChild(rocketRight);
-        } else {
-            const emptySpace = document.createElement("div");
-            navRow.appendChild(emptySpace);
-        }
+        // Кнопка "Домой"
+        const rocketHome = document.createElement("a");
+        rocketHome.href = "/index.html";
+        rocketHome.innerHTML = "🌺";  // Иконка "Домой"
+        rocketHome.classList.add("rocket-home");
 
+        // Кнопка "Вперед"
+        const rocketRight = document.createElement("a");
+        rocketRight.href = next || "#";
+        rocketRight.innerHTML = "🌺";  // Используем стрелку
+        rocketRight.classList.add("rocket-right");
+
+        // Добавляем элементы в общий ряд
+        navRow.appendChild(rocketLeft);
+        navRow.appendChild(rocketHome);
+        navRow.appendChild(rocketRight);
+
+        // Добавляем строку навигации в контейнер
         navContainer.appendChild(navRow);
         document.body.appendChild(navContainer);
     }
