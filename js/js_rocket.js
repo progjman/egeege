@@ -1,9 +1,11 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Определяем ссылки для каждой страницы
     const navigationLinks = {
         "mani0.html": { next: "mani1.html", prev: "/index.html" },
         "mani1.html": { next: "/index.html", prev: "mani0.html" },
-        "page2.html": { next: "page3.html", prev: "page1.html" },
+        "about.html": { next: "/index.html", prev: "/index.html" },
         "page3.html": { next: "page4.html", prev: "page2.html" },
         "page4.html": { next: "page5.html", prev: "page3.html" },
         "ru1.html": { next:"ru2.html", prev: "index.html" }

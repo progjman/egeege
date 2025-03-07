@@ -36,6 +36,11 @@ a {
     color: #80cbc4;
 }
 
+p {
+    text-align: left;
+}
+
+
 /* === Контейнер контента === */
 .container {
     max-width: 800px;
