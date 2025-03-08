@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "mani0.html": { next: "mani1.html", prev: "/index.html" },
         "mani1.html": { next: "/index.html", prev: "mani0.html" },
         "about.html": { next: "/index.html", prev: "/index.html" },
-        "page3.html": { next: "page4.html", prev: "page2.html" },
-        "page4.html": { next: "page5.html", prev: "page3.html" },
+        "0yoga.html": { next: "1yoga.html", prev: "/index.html" },
+        "1yoga.html": { next: "2yoga.html", prev: "0yoga.html" },
         "ru1.html": { next:"ru2.html", prev: "index.html" }
     };
 
