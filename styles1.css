@@ -20,10 +20,13 @@ body {
 }
 
 /* Заголовки */
-h1, h2, h3 {
+h1, h2, h3, b {
+    color: #ffcc00;
+    text-align: center;
+}
+b {
     color: #ffcc00;
 }
-
 /* Убираем точки у <ul> и цифры у <ol> */
 ul, ol {
     list-style: none;
@@ -33,6 +36,7 @@ ul, ol {
 
 /* Ссылки */
 a {
+    text-decoration: none; /* Убираем подчеркивание */
     color: #80cbc4;
 }
 
@@ -50,7 +54,7 @@ p, div {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     position: relative;
-    text-align: center;
+    text-align: left;
 }
 
 /* Контейнер в светлом режиме */

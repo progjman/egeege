@@ -1,0 +1,19 @@
+
+
+.content {
+    display: none; /* По умолчанию текст скрыт */
+    margin-top: 10px;
+}
+
+.title {
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffcc00;
+    
+}
+
+.small-numbers {
+    font-size: 0.5em;
+    /* Уменьшение размера шрифта на 50% */
+    color: #ffcc00;
+}

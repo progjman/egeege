@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Складной текст</title>
+    <style>
+        .content {
+            display: none; /* Скрываем текст по умолчанию */
+            margin-top: 10px;
+        }
+        .title {
+            cursor: pointer;
+            font-weight: bold;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h2 class="title" onclick="toggleContent()">1.1 अथ योगानुशासनम्</h2>
+
+<div class="content">
+    <p>🔹 "Итак, начинается изложение учения о йоге."</p>
+    <p><b>अथ atha</b> – теперь, отныне, в данный момент.</p>
+    <p><b>योग yoga</b> – йога, союз, соединение, дисциплина.</p>
+    <p><b>अनुशासनम् anuśāsanam</b> – наставление, руководство, учение, система практик.</p>
+    <p><b>Глубокий смысл сутры.</b></p>
+    <p><b>अथ atha</b> – Это ключевое слово, с которого Патанджали начинает свой труд...</p>
+</div>
+
+<script>
+    function toggleContent() {
+        let content = document.querySelector('.content');
+        content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>
